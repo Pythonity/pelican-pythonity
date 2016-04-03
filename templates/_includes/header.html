@@ -1,0 +1,16 @@
+<hgroup>
+  {% if SITELOGO %}
+    <h1>
+      <a href="{{ SITEURL }}/">
+        <img alt="{{ SITENAME }}" title="{{ SITENAME }}" src="{{ SITELOGO }}">
+        {{ SITENAME }}
+      </a>
+    </h1>
+  {% else %}
+    <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+  {% endif %}
+  
+  {% if SITESUBTITLE %}
+    <h2>{{ SITESUBTITLE }}</h2>
+  {% endif %}
+</hgroup>

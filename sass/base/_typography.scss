@@ -2,8 +2,8 @@ $blockquote: $type-border !default;
 $serif: "PT Serif", Georgia, Times, "Times New Roman", serif !default;
 $sans: "Dosis", sans-serif !default;
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
-$heading-font-family: $sans !default;
-$header-title-font-family: $sans !default;
+$heading-font-family: "Droid Sans", sans-serif !default;
+$header-title-font-family: $heading-font-family !default;
 $header-subtitle-font-family: $heading-font-family !default;
 
 // Fonts
@@ -39,7 +39,7 @@ h1 {
 
 @media only screen and (min-width: 992px) {
   body { font-size: 1.15em; }
-  h1 { font-size: 2.6em; line-height: 1.2em; }
+  h1 { font-size: 2.2em; line-height: 1.2em; }
 }
 
 #{headings()}{

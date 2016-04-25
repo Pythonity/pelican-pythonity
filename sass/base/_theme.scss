@@ -79,3 +79,7 @@ body {
     background: $main-bg $noise-bg;
   }
 }
+
+header[role="banner"] h1 {
+  font-family: Dosis, sans-serif;
+}

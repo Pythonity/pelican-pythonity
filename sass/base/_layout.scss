@@ -134,6 +134,8 @@ aside.sidebar {
   &.left, &.right { margin-bottom: .8em; }
 }
 
+.text-center { text-align: center; }
+
 .toggle-sidebar { &, .no-sidebar & { display: none; }}
 
 body.sidebar-footer {

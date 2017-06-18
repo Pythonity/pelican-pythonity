@@ -2,7 +2,6 @@ body > nav {
   display: none;
   position: relative;
   background-color: $nav-bg;
-  font-weight: 500;
   padding-top: .35em;
   padding-bottom: .35em;
   form {
@@ -41,7 +40,8 @@ body > nav {
       @include horizontal-list(0);
       float: left;
       display: block;
-      padding-top: .15em;
+      padding-top: .2em;
+      padding-bottom: .2em;
     }
     ul.subscription {
       margin-left: .8em;
@@ -50,6 +50,7 @@ body > nav {
     }
     ul li {
       margin: 0;
+      padding-bottom: 3px;
     }
     a {
       @include link-colors($nav-color, $nav-color-hover, $visited: $nav-color);

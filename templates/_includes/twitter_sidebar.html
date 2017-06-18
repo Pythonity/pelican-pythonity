@@ -3,36 +3,27 @@
 
 {% if TWITTER_USER %}
 <section>
-  {% if TWITTER_WIDGET_ID %}
+  {% if TWITTER_WIDGET %}
   <h1>Latest Tweets</h1>
   <ul id="tweets">
     <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
-    $.domReady(function(){
-      var widgetId = '{{TWITTER_WIDGET_ID}}',
-          domId = 'tweets',
-          count = {{TWITTER_TWEET_COUNT|default(5)}},
-          hyperlinkUrlsPlus = true,
-          showUserPhoto = false,
-          timeOfTweet = true,
-          dateFormat = 'default',
-          showRetweets = {{_TWITTER_SHOW_REPLIES}},
-          customOutputFn = null,
-          showReplyRetweetButtons = false;
+    $(document).ready(function(){
+      var configList = {
+          "profile": {"screenName": '{{TWITTER_USER}}'},
+          "domId": 'tweets',
+          "maxTweets": {{TWITTER_TWEET_COUNT|default(5)}},
+          "enableLinks": true,
+          "showUser": false,
+          "showTime": true,
+          "showRetweet": {{_TWITTER_SHOW_REPLIES}},
+          "showInteraction": false,
+          "showImages": false,
+          "lang": 'en'
+        };
 
-      twitterFetcher.fetch(
-        widgetId,
-        domId,
-        count,
-        hyperlinkUrlsPlus,
-        showUserPhoto,
-        timeOfTweet,
-        dateFormat,
-        showRetweets,
-        customOutputFn,
-        showReplyRetweetButtons
-      );
+      twitterFetcher.fetch(configList);
     });
   </script>
   <script src="{{ ROOT_URL }}/theme/js/twitter.js" type="text/javascript"> </script>

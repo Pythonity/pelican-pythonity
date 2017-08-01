@@ -28,13 +28,11 @@ article {
   }
   h2 {
     padding-top: 0.8em;
-    background: $img-border top left repeat-x;
   }
   .entry-content & h2:first-child, header + h2 { padding-top: 0; }
   .entry-content {
     font-family: "PT Sans";
   }
-  h2:first-child, header + h2 { background: none; }
   .feature {
     padding-top: .5em;
     margin-bottom: 1em;

@@ -4,6 +4,7 @@ body > nav {
   background-color: $nav-bg;
   padding-top: .35em;
   padding-bottom: .35em;
+  padding-right: 10px;
   form {
     @include background-clip(padding-box);
     margin: 0; padding: 0;

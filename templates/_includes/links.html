@@ -1,9 +1,8 @@
 {% if LINKS %}
-    <section>
-        <h1>Links</h1>
+    <section class="sidebar-links">
         <ul>
-        {% for name, link in LINKS %}
-            <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+        {% for title, link in LINKS %}
+            <li><a href="{{ link }}" target="_blank">{{ title|safe }}</a></li>
         {% endfor %}
         </ul>
     </section>

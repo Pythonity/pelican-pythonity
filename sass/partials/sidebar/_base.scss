@@ -23,6 +23,9 @@ aside.sidebar {
     &:first-of-type h1 {
       margin-top: 0;
     }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
   img {
     @extend .flex-content;
@@ -47,9 +50,19 @@ aside.sidebar {
     color: inherit;
     @include transition(color .5s);
   }
-  &:hover a {
-    color: $sidebar-link-color;
-    &:hover { color: $sidebar-link-color-hover; }
+  .sidebar-links {
+    font-size: 28px;
+    text-align: center;
+    ul {
+      list-style: none;
+      margin: 0;
+    }
+    li {
+      display: inline;
+      padding: 12px;
+      border-bottom: none;
+      box-shadow: none;
+    }
   }
 }
 .aside-alt-link {
